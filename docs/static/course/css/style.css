@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Source+Code+Pro&family=Varela+Round&display=swap');
+
+
+/* reset browser styles */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1.2;
+}
+
+ol {
+    padding-left: 1.4em;
+    list-style: decimal;
+}
+
+ul {
+    padding-left: 60px;
+    list-style: disc;
+}
+
+ul a {
+    text-decoration: none;
+}
+ul a:visited{
+    color:#4f69ff;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* end reset browser styles */
+
+html {
+    background-color: white;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1600px;
+    background-color: #8675A9;
+}
+
+
+.sidebar {
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #8675A9;
+    font-family: 'Varela Round', Arial, Helvetica, sans-serif;
+    float: left;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.formula {
+    list-style-type: none;
+    margin:0 auto;
+    padding: 5px;
+    min-width: 640px;
+    max-width: 80%;
+    text-align: center;
+    justify-items: center;
+    background-color: #FFD5CD;
+    border: 100px;
+    border-radius: 10px;
+    border-color: #FFD5CD;
+    box-shadow: #C3AED6;
+    text-shadow: #C3AED6;
+}
+
+.example {
+    min-width: 640px;
+    max-width: 80%;
+    background-color: #C3AED6;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border-color: #888888;
+    box-shadow: #3b3535;
+}
+
+.example figure {
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+.example figure img {
+    display: block;
+    width: 100%;
+}
+
+
+.sidebar a {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    background: #C3AED6;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 7px 5px;
+    display: block;
+    border-bottom: none;
+}
+
+.sidebar li:last-of-type a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* .sidebar li:nth-of-type(even) a {
+    color: #F0F0F0;
+    background: #3b3535;
+} */
+
+.sidebar li a:hover {
+    font-weight: bold;
+    color: black;
+    background-color: #FFD5CD;
+}
+
+.sidebar .current {
+    font-weight: bold;
+    background-color: #8675A9;
+    color: whitesmoke;
+}
+
+.sidebar ul a {
+    font-weight: bold;
+    color:black;
+}
+
+.sidebar .logo {
+    background-color: #092e20;
+    padding: 0;
+    margin: 0;
+    padding: 7px 0;
+}
+
+.sidebar .logo img {
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    min-width: 50px;
+    max-width: 60px;
+    display: block;
+}
+
+.content {
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.content {
+    width: 80%;
+    min-height: 100vh;
+    background-color: #fffdfd;
+    font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
+    margin: 0 20%;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    padding: 10px;
+    text-align: left;
+    padding-left: 20px;
+    color: #8675A9;
+}
+
+.content h1 {
+    font-size: 3rem;
+}
+
+.content h2 {
+    font-size: 2rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+    padding: 0px 10px 10px 20px;
+}
+
+.content ol {
+    margin-left: 30px;
+    padding-left: 30px;
+}
+
+p a {
+    color: #4f69ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.img-block {
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+}
+
+figure figcaption {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.img-code-block {
+    align-items: left;
+    text-align: left;
+}
+
+.youtube-video {
+    text-align: center;
+}
+
+small.small,
+small .content h1 {
+    font-size: 0.75rem;
+}
+
+.code {
+    background: black;
+    border: 0.5px solid #888888;
+    margin: 10px 20px;
+    color: #ffffff;
+    background-size: 100%;
+    padding: 3% 0 1%;
+}
+
+
+
+.code-line-left {
+    text-align: left;
+    font: 1.2rem 'Source Code Pro', Consolas, 'Courier New', Courier, monospace;
+}
+
+.git-bash {
+    font: 1.2rem 'Source Code Pro', Consolas, 'Courier New', Courier, monospace;
+    background: black url("../images/bash.svg") no-repeat;
+    border: 0.5px solid #888888;
+    margin: 10px 20px;
+    color: #ffffff;
+    background-size: 100%;
+    padding: 3% 0 1%;
+}
+
+.inline-code {
+    font-family: 0.9rem 'Source Code Pro', Consolas, 'Courier New', Courier, monospace;
+    display: inline-block;
+    background-color: #DDD;
+}
+
+.bash-line {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.bash {
+    color: rgb(190, 190, 190);
+}
+
+.bash-ps1 {
+    color: rgb(0, 150, 0);
+}
+
+.bash-ps2 {
+    color: rgb(202, 0, 168);
+}
+
+.bash-pwd {
+    color: rgb(188, 191, 0);
+}
+
+.bash-prompt {
+    color: rgb(190, 190, 190);
+}
+
+.pagination {
+    padding: 2px 10px 10px 10px;
+    margin: 30px 10px;
+}
+
+.pagination ul {
+    list-style-type: none;
+}
+
+.pagination li {
+    min-width: 100px;
+    text-align: center;
+}
+
+.pagination ul li:first-of-type {
+    float: left;
+}
+
+.pagination a {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 15px;
+}
+
+.pagination a:hover {
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: rgb(117, 0, 68);
+    border: 1px solid rgb(117, 0, 68);
+}
+
+.pagination ul li:last-of-type {
+    float: right;
+}
+
+
+.code.python {
+    background: black;
+    border: 0.5px solid #888888;
+    margin: 10px 20px;
+    color: #ffffff;
+    background-size: 100%;
+    padding: 1% 0 1%;
+}
+
+.python.import {
+    color: rgb(247, 0, 255);
+}
+
+.python.module,
+.python.identifier {
+    color: rgb(75, 196, 163);
+}
+
+.python.module-function,
+.python.object-method {
+    color: rgb(205, 179, 79);
+}
+
+.python.python-class-attribute,
+.python.python-object,
+.python.python-function-param {
+    color: rgb(129,196,249);
+}
+
+.python.python-class,
+.python.python-none,
+.python-literal {
+    color: rgb(65, 156, 200);
+}
+
+.python.python-string {
+    color: rgb(205, 136, 68);
+}
+
+.project-list {
+    padding-left: 50px;
+    list-style-type: disc;
+}
+
+
+/* styles for python codes in white background */
+.wcode {
+    background: #f3eff7;
+    max-width: 80%;
+    margin: 5px auto;
+    padding: 5px;
+    text-align: left;
+    font: 1.2rem 'Source Code Pro',
+    Consolas,
+    'Courier New',
+    Courier,
+    monospace;
+    line-height: 1.4;
+}
+
+/* python keywords import, as, from */
+.ki {
+    color: #008000;
+    font-weight: bold; /* import keywords */
+} 
+.o {
+    color: #aa22ff;
+    font-weight: bold; /* operator */
+}
+.ln {
+    color:#008800; /* literal number */
+}
+.lrs {
+    color:#ba2121; /* raw string */
+}
+.s {
+    color: #d98221; /* string */
+}
+.comment {
+    color: #408080; /* comment */
+}
+
+.pb {
+    color: #0055aa; /* parantheses or brackets */
+}
+
+
+/* colors
+FFD5CD
+EFBBCF
+C3AED6
+8675A9
+*/
