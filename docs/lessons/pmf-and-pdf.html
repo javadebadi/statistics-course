@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Introduction to Statistics</title>
+        <title>PMF and PDF</title>
         
 <base href="/">
 
@@ -78,7 +78,7 @@
                 <li>
                     
                         
-                        <a href="/courses/statistics/lessons/introduction-to-statistics" class="current">
+                        <a href="/courses/statistics/lessons/introduction-to-statistics" class="">
                         
                     
                         Introduction to Statistics
@@ -128,7 +128,7 @@
                 <li>
                     
                         
-                        <a href="/courses/statistics/lessons/pmf-and-pdf" class="">
+                        <a href="/courses/statistics/lessons/pmf-and-pdf" class="current">
                         
                     
                         PMF and PDF
@@ -160,11 +160,54 @@
         <article class="content">
             
 <h1>
-Introduction to Statistics
+PMF and PDF
 </h1>
-<p>According to <a href="https://en.wikipedia.org/wiki/Statistics">Wikipedia</a> Statistics is the discipline that concerns the collection, organization, analysis, interpretation, and presentation of data.</p>
+<p>
+Probability Mass Function (PMF) and Probability Density Function (PDF) are tools to model the probabilities of random variables. The PMF is used for discrete random variables and the PDF is used for continuous random variables.
+</p>
 
-<p>In this course, we learn about statistics and probability.</p>
+<h2 id="pmf-bernoulli">Bernoulli Distribution</h2>
+<p>
+Bernoulli distribution is used to model random variables which can have 2 outcomes. The most famous random variable with this distribution is the tossing of a coin which can only have two outcomes, head or tail. Mathematically, this distribution is
+
+<span class="block-formula">
+\(
+\rm{Bernoulli}(X = x) = p^{x} (1 - p)^{1-x}
+\)
+</span>
+
+where \(p\) is the probability of success.
+</p>
+
+<p>
+For example, for a <b>fair coin</b> the probability of heads and tails is equal therefore, \(p=1/2\) and the PMF is:
+<span class="block-formula">
+\(
+\rm{Bernoulli}(\text{tossing a fair coin} = x) = (\frac{1}{2})^{x} (\frac{1}{2})^{1-x} = \frac{1}{2}
+\)
+</span>
+
+In python, we can use <span class="inline-code">scipy.stats</span> to get PMF or simulate data for various probability distributions.
+</p> 
+
+<div class="wcode">
+<code>
+<pre>
+<span class="ki">import</span> numpy <span class="ki">as</span> np
+<span class="ki">from</span> scipy.stats <span class="ki">import</span> bernoulli
+
+<span class="comment"># simulate 10 trails of tossing a fair coin</span>
+np.random.seed(<span class="ln">123</span>)
+fair_coin_simulation <span class="o">=</span> bernoulli.rvs(p<span class="o">=</span><span class="ln">0.5</span>, size<span class="o">=</span><span class="ln">10</span>)
+fair_coin_simulation
+<span class="comment"># array([1, 0, 0, 1, 1, 0, 1, 1, 0, 0])</span>
+
+<span class="comment"># find pmf value of tossing a fair coin</span>
+bernoulli.pmf(<span class="ln">1</span>, p<span class="o">=</span><span class="ln">0.5</span>)
+<span class="comment"># 0.5</span>
+</pre>
+</code>
+</div>
 
         </article>
 

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Source+Code+Pro&family=Varela+Round&display=swap');
 
-
+/* 
 /* reset browser styles */
-html,
+/* html,
 body,
 div,
 span,
@@ -101,10 +101,10 @@ menu,
 nav,
 section {
     display: block;
-}
+} */ */
 
 body {
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 ol {
@@ -115,6 +115,10 @@ ol {
 ul {
     padding-left: 60px;
     list-style: disc;
+}
+
+ul.itemize li {
+    padding-right: 100px;
 }
 
 ul a {
@@ -146,8 +150,8 @@ body {
 .sidebar {
     width: 20%;
     margin: 0;
-    padding: 0;
-    height: 100vh;
+    padding: 80px 0 0;
+    /* height: 100vh; */
     background-color: #8675A9;
     font-family: 'Varela Round', Arial, Helvetica, sans-serif;
     float: left;
@@ -158,44 +162,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-ul.formula {
-    list-style-type: none;
-    margin:0 auto;
-    padding: 5px;
-    min-width: 640px;
-    max-width: 80%;
-    text-align: center;
-    justify-items: center;
-    background-color: #FFD5CD;
-    border: 100px;
-    border-radius: 10px;
-    border-color: #FFD5CD;
-    box-shadow: #C3AED6;
-    text-shadow: #C3AED6;
-}
-
-.example {
-    min-width: 640px;
-    max-width: 80%;
-    background-color: #C3AED6;
-    padding: 5px;
-    margin: 10px auto;
-    border-radius: 10px;
-    border-color: #888888;
-    box-shadow: #3b3535;
-}
-
-.example figure {
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-}
-.example figure img {
-    display: block;
-    width: 100%;
-}
-
 
 .sidebar a {
     margin: 0;
@@ -233,7 +199,7 @@ ul.formula {
 
 .sidebar ul a {
     font-weight: bold;
-    color:black;
+    color: black;
 }
 
 .sidebar .logo {
@@ -254,12 +220,80 @@ ul.formula {
     display: block;
 }
 
-.content {
-    font-size: 1.2rem;
-    line-height: 1.4;
+nav ul li.course-title  {
+    background-color: #fffdfd;
+    margin-top: -30px;
+    padding: 30px 0 0;
+}
+nav ul li.course-title a {
+    font-size: 1.4rem;
+    background-color: #fffdfd;
+    border: none;
+    color: #8675A9;
+    text-align: center;
 }
 
+nav ul li.course-title a:hover {
+    font-size: 1.5rem;
+    background-color: #fffdfd;
+    border: none;
+    color: #FFD5CD;
+    text-align: center;
+}
+
+nav ul li.course-title a.course-icon {
+    font-size: 3rem;
+    margin-bottom: -10px;
+    padding-bottom: 0px;
+}
+
+
+ul.formula {
+    list-style-type: none;
+    margin:0 auto;
+    padding: 5px;
+    min-width: 640px;
+    max-width: 80%;
+    text-align: center;
+    justify-items: center;
+    background-color: #FFD5CD;
+    border: 100px;
+    border-radius: 10px;
+    border-color: #FFD5CD;
+    box-shadow: #C3AED6;
+    text-shadow: #C3AED6;
+}
+
+.example {
+    min-width: 640px;
+    max-width: 80%;
+    background-color: #C3AED6;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border-color: #888888;
+    box-shadow: #3b3535;
+}
+
+.example figure {
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+.example figure img {
+    display: block;
+    width: 100%;
+    padding: 0px 10px;
+}
+.example img {
+    border-radius: 5%;
+}
+
+
 .content {
+    padding-top: 67px;
+    font-size: 1.2rem;
+    line-height: 2rem;
     width: 80%;
     min-height: 100vh;
     background-color: #fffdfd;
@@ -280,16 +314,16 @@ ul.formula {
 }
 
 .content h1 {
-    font-size: 3rem;
-}
-
-.content h2 {
     font-size: 2rem;
 }
 
+.content h2 {
+    font-size: 1.5rem;
+}
+
 .content p {
-    font-size: 1.2rem;
-    padding: 0px 10px 10px 20px;
+    font-size: 1rem;
+    padding: 0px 50px 1px 20px;
 }
 
 .content ol {
@@ -359,7 +393,12 @@ small .content h1 {
 .inline-code {
     font-family: 0.9rem 'Source Code Pro', Consolas, 'Courier New', Courier, monospace;
     display: inline-block;
-    background-color: #DDD;
+    background-color: #E5E5E5;
+    padding: 0;
+    margin: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 4px;
 }
 
 .bash-line {
@@ -408,12 +447,12 @@ small .content h1 {
 
 .pagination a {
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 1.0em;
     text-decoration: none;
     color: white;
-    background-color: green;
-    border: 1px solid green;
-    border-radius: 15px;
+    background-color: rgb(117, 0, 68);
+    border: 1px solid rgb(117, 0, 68);
+    border-radius: 5px;
 }
 
 .pagination a:hover {
@@ -472,20 +511,27 @@ small .content h1 {
     list-style-type: disc;
 }
 
+span.block-formula {
+    display: block;
+    padding: 2px;
+    text-align: center;
+}
+
 
 /* styles for python codes in white background */
-.wcode {
+.wcode pre{
     background: #f3eff7;
     max-width: 80%;
     margin: 5px auto;
     padding: 5px;
     text-align: left;
-    font: 1.2rem 'Source Code Pro',
+    font: 1rem 'Source Code Pro',
     Consolas,
     'Courier New',
     Courier,
     monospace;
     line-height: 1.4;
+    color:black;
 }
 
 /* python keywords import, as, from */
@@ -514,6 +560,14 @@ small .content h1 {
     color: #0055aa; /* parantheses or brackets */
 }
 
+.plot {
+    align-items: center;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
 
 /* colors
 FFD5CD
